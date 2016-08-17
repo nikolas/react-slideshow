@@ -1,16 +1,24 @@
 var slides = [
     {
-        'title': '',
         'img': 'img/1.png'
-
     },
     {
-        'title': '',
-        'img': 'img/image.jpg'
+        'img': 'img/2.png'
     },
     {
-        'title': '',
-        'img': null
+        'img': 'img/3.png'
+    },
+    {
+        'img': 'img/4.png'
+    },
+    {
+        'img': 'img/51.png'
+    },
+    {
+        'img': 'img/5.png'
+    },
+    {
+        'img': 'img/6.png'
     }
 ];
 
