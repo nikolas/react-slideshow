@@ -1,14 +1,18 @@
+button {
+    cursor: pointer;
+}
+
 .prev, .next {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
 }
 
 .prev {
-    left: 20px;
+    left: 12px;
 }
 
 .next {
-    right: 20px;
+    right: 12px;
 }
 
 .slide .img {

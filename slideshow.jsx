@@ -25,10 +25,17 @@ var slides = [
 
 var PrevButton = React.createClass({
     render: function() {
+        var disabled = false;
+        if (this.props.slideshow.state.currentSlide <= 0) {
+            disabled = true;
+        }
         return (
-            <button className="prev"
+            <button disabled={disabled}
+                    className="prev"
                     onClick={this.handleClick}>
-                previous
+                {disabled ?
+                 String.fromCharCode(8602) :
+                 String.fromCharCode(8612)}
             </button>
         );
     },
@@ -39,10 +46,17 @@ var PrevButton = React.createClass({
 
 var NextButton = React.createClass({
     render: function() {
+        var disabled = false;
+        if (this.props.slideshow.state.currentSlide >= slides.length - 1) {
+            disabled = true;
+        }
         return (
-            <button className="next"
+            <button disabled={disabled}
+                    className="next"
                     onClick={this.handleClick}>
-                next
+                {disabled ?
+                 String.fromCharCode(8603) :
+                 String.fromCharCode(8614)}
             </button>
         );
     },
@@ -54,7 +68,6 @@ var NextButton = React.createClass({
 var SlideDisplay = React.createClass({
     render: function() {
         var slide = this.props.slides[this.props.currentSlide];
-        console.log(window.innerHeight);
         return (
             <div className="slide">
                 <div className="img"
